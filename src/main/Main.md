@@ -8,6 +8,6 @@ Enter your name here: miguel
 
 ## The best animals
 
-1. Cuttlefish
-2. Platypus
-3. Three-toed sloth
+1. Dog
+2. Cat
+3. Ten-toed sloth
