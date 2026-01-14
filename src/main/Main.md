@@ -2,7 +2,7 @@
 
 This is a simple MarkDown file for practicing Git merging
 
-Enter your name here: ___________
+Enter your name here: miguel
 
 ## The best animals
 
