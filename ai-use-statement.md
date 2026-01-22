@@ -1,5 +1,6 @@
 # AI Use Statement
 
-Replace this with your AI use statement (see your lab instructions). 
+I used chatgpt study mode to try and clear some of the confusion with the quirkiness in Java.
+https://chatgpt.com/share/6971a7c6-85b4-8006-a591-3cbf791ca240
 
-Failure to include an AI use statement may result in a grade deduction of up to 100% on this lab.
+However, i mostly used your java-basics document to put this together.
