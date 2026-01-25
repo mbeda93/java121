@@ -9,16 +9,40 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 
+
+
+/**
+ 1. [.] uses
+  - JOptionPane.showMessageDialog(parentComponent, message, title, messageType, null) -> Class Method
+  - JOptionPane.ERROR_MESSAGE -> Class Variable (conveniently highlighted in purple)
+
+ 2. Function/Method calls:
+    JOptionPane.showMessageDialog()
+    - This returns an error message if the try doesnt work out (no data from the server where this program is connecting to)
+    - Tried to run this with my LAN disconnected, the error message never appreared.
+ 3. Constructor methods:
+    var avatarStream = getRandomAvatarStream()
+    - Calls the getRandomAvatarStream function in the file, and grabs a random avatar via the dicebear api, and returns that data stream as the variable.
+
+ **/
 void main() {
 
     try {
-        var avatarStream = getRandomAvatarStream();
-        showAvatar(avatarStream);
+        var avatarStream = getRandomAvatarStream(); //constructor, object type
+        showAvatar(avatarStream); //func call
     } catch (IOException | InterruptedException e) {
-        JOptionPane.showMessageDialog(null, "Failed to load avatar: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Failed to load avatar: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE); //class method
+
     }
 
 }
+
+
+
+
+
+
+
 
 InputStream getRandomAvatarStream() throws IOException, InterruptedException {
     // Pick a random style
@@ -38,6 +62,15 @@ InputStream getRandomAvatarStream() throws IOException, InterruptedException {
         return response.body();
     }
 }
+
+
+
+
+
+
+
+
+
 
 void showAvatar(InputStream imageStream) {
     JFrame frame = new JFrame("PNG Viewer");
