@@ -8,31 +8,28 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-
-
+//
+//Class member (static)
+//Instance member (not static)
 
 /**
- 1. [.] uses
-  - JOptionPane.showMessageDialog(parentComponent, message, title, messageType, null) -> Class Method
-  - JOptionPane.ERROR_MESSAGE -> Class Variable (conveniently highlighted in purple)
+Types used...
 
- 2. Function/Method calls:
-    JOptionPane.showMessageDialog()
-    - This returns an error message if the try doesnt work out (no data from the server where this program is connecting to)
-    - Tried to run this with my LAN disconnected, the error message never appreared.
- 3. Constructor methods:
-    var avatarStream = getRandomAvatarStream()
-    - Calls the getRandomAvatarStream function in the file, and grabs a random avatar via the dicebear api, and returns that data stream as the variable.
 
+
+    JOptionPane - //what does it do?
+    URI -
  **/
 void main() {
 
     try {
+        //constructor method. assigns the output of the getRandomAvatarStream() function to the avatarStream variable
         var avatarStream = getRandomAvatarStream(); //constructor, object type
         showAvatar(avatarStream); //func call
     } catch (IOException | InterruptedException e) {
+        //      class method. returns error message if the try block fails
         JOptionPane.showMessageDialog(null, "Failed to load avatar: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE); //class method
-
+//      type name [.] class method
     }
 
 }
