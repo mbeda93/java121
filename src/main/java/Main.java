@@ -20,6 +20,14 @@ Types used...
     JOptionPane - //what does it do?
     URI -
  **/
+/*
+
+Types used in this code:
+
+(Add your answers to lab instruction #4 here)
+
+ */
+
 void main() {
 
     try {
