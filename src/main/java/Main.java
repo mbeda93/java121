@@ -15,29 +15,34 @@ import java.net.http.HttpResponse;
 /**
 Types used...
 
+ JOptionPane - interactive dialog boxes
+ URI - web links
+ HttpClient - handles reauests and responses to/from the internet
+ HttpRequest - represents a single request sent thru HttpClient
+ HttpResponse - represents a single respose recieved thru HttpClient
+ ImageIO - image support for read/write
+ JFrame - container for GUI elements
+ JLabel - area for short text strings/images
+ ImageIcon - create icons from images
+ Color - rgb color
+ BorderLayout - layout manager
 
-
-    JOptionPane - //what does it do?
-    URI -
- **/
-/*
-
-Types used in this code:
-
-(Add your answers to lab instruction #4 here)
-
- */
+ Packages used...
+ javax.swing - lightweight gui components (JOptionPane, JFrame, JLabel, ImageIcon, javax.ImageIO)
+ java.awt - ui and graphic element classes (Color, BorderLayout)
+ java.net - networking classes (HttpClient/Response/Request)
+ java.io - system io
+**/
 
 void main() {
 
     try {
         //constructor method. assigns the output of the getRandomAvatarStream() function to the avatarStream variable
-        var avatarStream = getRandomAvatarStream(); //constructor, object type
-        showAvatar(avatarStream); //func call
+        var avatarStream = getRandomAvatarStream(); // object/reference type variable
+        showAvatar(avatarStream); //func call. displays the returned avatar in a window
     } catch (IOException | InterruptedException e) {
-        //      class method. returns error message if the try block fails
-        JOptionPane.showMessageDialog(null, "Failed to load avatar: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE); //class method
-//      type name [.] class method
+        //error message if retrieving the avatar fails.
+        JOptionPane.showMessageDialog(null /*prim*/ , "Failed to load avatar: " + e.getMessage() /* object/reference (String) */, "Error" /*Object (String)*/, JOptionPane.ERROR_MESSAGE /*Object Reference, error message func call*/); //class method
     }
 
 }
